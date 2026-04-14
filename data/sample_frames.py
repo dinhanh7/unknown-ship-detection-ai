@@ -1,7 +1,7 @@
 import cv2
 import os
 
-video_path = '/home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/data/output_padded.mp4'
+video_path = '/home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/data/origin_video.mp4'
 output_dir = '/home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/data/images'
 
 if not os.path.exists(output_dir):
@@ -21,7 +21,7 @@ while True:
         break
         
     # Cứ 5 frame thì cắt và lưu lại 1 frame ảnh (vd: frame 0, 5, 10...)
-    if frame_idx % 5 == 0:
+    if frame_idx % 4 == 0:
         filename = f"frame_{saved_idx:04d}.jpg"
         out_path = os.path.join(output_dir, filename)
         cv2.imwrite(out_path, frame)
