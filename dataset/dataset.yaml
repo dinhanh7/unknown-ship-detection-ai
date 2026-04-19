@@ -1,0 +1,7 @@
+path: /home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/temp/yolo_ship_dataset
+train: images/train
+val: images/val
+nc: 2
+names:
+  0: tau_tvien
+  1: tau_la

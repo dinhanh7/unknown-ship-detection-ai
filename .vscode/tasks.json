@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Train YOLOv5n Live (gpu_tf)",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"source ~/.bashrc >/dev/null 2>&1 || true; source ~/miniconda3/etc/profile.d/conda.sh; conda activate gpu_tf; cd /home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/yolov5; python train.py --img 640 --batch 16 --epochs 50 --data /home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/dataset/dataset.yaml --weights yolov5n.pt --device 0 --workers 4 --project /home/abuntu/Documents/github_Temp/unknown-ship-detection-ai/runs/train --name tau_yolov5n_live --exist-ok"
+			],
+			"isBackground": true
+		}
+	]
+}
